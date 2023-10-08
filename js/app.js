@@ -19,7 +19,11 @@
 //     - ALTRIMENTI 
 //         stampa il valore di n
 
-const containerDOMElement = document.querySelector('.container')
+// prendo la classe container dal DOM
+// const containerDOMElement = document.querySelector('.container')
+
+// prendo la classe grid dal DOM
+const gridDOMElement = document.querySelector('.grid')
 
 // CREA LA SCALA DA 1 A 100
 for (let i = 0; i < 100; i++) {
@@ -40,8 +44,12 @@ for (let i = 0; i < 100; i++) {
 	console.log(boxDOMElement)
 
     // appendo la classe box all'elemendo container
-    containerDOMElement.append(boxDOMElement)
+    // containerDOMElement.append(boxDOMElement)
 
+    // appenaìdo la classe box all'elemento grid per disporre i box uno di fianco all'altro
+    gridDOMElement.append(boxDOMElement)
+
+    // CICLO for:
     // calcolo quando il modulo da resto zero a seconda della variabile selezionata
     if (fizzBuzz === 0) {
         console.log('FizzBuzz:', n, fizzBuzz)
