@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fizz Buzz</title>
+    <!-- css -->
+    <style>
+        .grid {
+				display: grid;
+				gap: 10px;
+				grid-template-columns: repeat(8, 1fr);
+			}
+
+			.box {
+				aspect-ratio: 1;
+                border: 1px solid black;
+				color: black;
+				font-size: 24px;
+				font-weight: bold;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+                width: 100px;
+                margin: 5px;
+			}
+
+            .container {
+                width: 1000px;
+                margin: 0 auto;
+            }
+
+            .title {
+                text-align: center;
+                text-transform: uppercase;
+            }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1 class="title">fizzBuzz DOM</h1>
+    </div>
     
 
 

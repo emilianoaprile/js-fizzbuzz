@@ -19,8 +19,9 @@
 //     - ALTRIMENTI 
 //         stampa il valore di n
 
+const containerDOMElement = document.querySelector('.container')
 
-// CREA LA SCALA DA 1 A 100 + console.log
+// CREA LA SCALA DA 1 A 100
 for (let i = 0; i < 100; i++) {
     // inizializzo una variabile n per escludere lo 0
 	let n = i + 1
@@ -31,19 +32,37 @@ for (let i = 0; i < 100; i++) {
     let buzz = n % 5;
     let fizzBuzz = n % 15;
 
+    // inizializzo una variabile che crea un elemento div nel DOM
+    const boxDOMElement = document.createElement('div')
+
+    // aggiungo la classe box al div appena creato
+	boxDOMElement.classList.add('box')
+	console.log(boxDOMElement)
+
+    // appendo la classe box all'elemendo container
+    containerDOMElement.append(boxDOMElement)
+
     // calcolo quando il modulo da resto zero a seconda della variabile selezionata
     if (fizzBuzz === 0) {
         console.log('FizzBuzz:', n, fizzBuzz)
+        boxDOMElement.innerHTML = 'FizzBuzz';
 
     } else if (fizz === 0) {
         console.log('Fizz:', n, fizz)
+        boxDOMElement.innerHTML = 'Fizz';
 
     } else if (buzz === 0) {
         console.log('Buzz:', n, buzz)
+        boxDOMElement.innerHTML = 'Buzz';
 
     // stampo "n" per visualizzare i numeri che non sono coinvolti nel calcolo
     } else {
         console.log(n)
+        boxDOMElement.innerHTML = n
     }
 
 }
+
+
+
+
