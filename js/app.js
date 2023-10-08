@@ -37,7 +37,7 @@ for (let i = 0; i < 100; i++) {
     let fizzBuzz = n % 15;
 
     // inizializzo una variabile che crea un elemento div nel DOM
-    const boxDOMElement = document.createElement('div')
+    let boxDOMElement = document.createElement('div')
 
     // aggiungo la classe box al div appena creato
 	boxDOMElement.classList.add('box')
@@ -54,19 +54,28 @@ for (let i = 0; i < 100; i++) {
     if (fizzBuzz === 0) {
         console.log('FizzBuzz:', n, fizzBuzz)
         boxDOMElement.innerHTML = 'FizzBuzz';
+        // element style
+        boxDOMElement.style.backgroundColor = '#f14670';
 
     } else if (fizz === 0) {
         console.log('Fizz:', n, fizz)
         boxDOMElement.innerHTML = 'Fizz';
+        // element style
+        boxDOMElement.style.backgroundColor = '#0ad6a1';
 
     } else if (buzz === 0) {
         console.log('Buzz:', n, buzz)
         boxDOMElement.innerHTML = 'Buzz';
+        // element style
+        boxDOMElement.style.backgroundColor = '#FFD166';
+
 
     // stampo "n" per visualizzare i numeri che non sono coinvolti nel calcolo
     } else {
         console.log(n)
         boxDOMElement.innerHTML = n
+        // element style
+        boxDOMElement.style.backgroundColor = '#1289B2';
     }
 
 }
